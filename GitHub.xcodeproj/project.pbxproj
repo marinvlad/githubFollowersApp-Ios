@@ -26,6 +26,7 @@
 		F507E04D24C86620008CEFEE /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F507E04C24C86620008CEFEE /* GFError.swift */; };
 		F51D300124CC7DB100478287 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D300024CC7DB000478287 /* UIHelper.swift */; };
 		F52FD46224CEA3440067E004 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD46124CEA3440067E004 /* GFItemInfoView.swift */; };
+		F52FD46424CEACD80067E004 /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52FD46324CEACD80067E004 /* GFItemInfoViewController.swift */; };
 		F5A30B0124CD89DE00136FDC /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A30B0024CD89DE00136FDC /* GFEmptyStateView.swift */; };
 		F5A30B0324CDCB2900136FDC /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A30B0224CDCB2900136FDC /* UserInfoViewController.swift */; };
 		F5A30B0524CDF14200136FDC /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A30B0424CDF14200136FDC /* GFSecondaryTitleLabel.swift */; };
@@ -57,6 +58,7 @@
 		F507E04C24C86620008CEFEE /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
 		F51D300024CC7DB000478287 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F52FD46124CEA3440067E004 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
+		F52FD46324CEACD80067E004 /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
 		F5A30B0024CD89DE00136FDC /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		F5A30B0224CDCB2900136FDC /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		F5A30B0424CDF14200136FDC /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				F507E03B24C838C9008CEFEE /* GFAlertViewController.swift */,
 				F5A30B0624CDF1AB00136FDC /* GFUserInfoHeaderViewController.swift */,
+				F52FD46324CEACD80067E004 /* GFItemInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				F5FCB61A24CADD3C009E1254 /* GFAvatarImageView.swift in Sources */,
 				F507E03024C81C22008CEFEE /* FavoritesViewController.swift in Sources */,
 				F5A30B0324CDCB2900136FDC /* UserInfoViewController.swift in Sources */,
+				F52FD46424CEACD80067E004 /* GFItemInfoViewController.swift in Sources */,
 				F507E01924C81533008CEFEE /* SceneDelegate.swift in Sources */,
 				F507E03424C823BF008CEFEE /* GFTextField.swift in Sources */,
 				F5A30B0724CDF1AB00136FDC /* GFUserInfoHeaderViewController.swift in Sources */,
