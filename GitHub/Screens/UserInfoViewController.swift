@@ -43,6 +43,7 @@ class UserInfoViewController: UIViewController {
             }
         }
     }
+    
     func layoutUI() {
         let padding : CGFloat = 20
         let itemHeight : CGFloat = 140
