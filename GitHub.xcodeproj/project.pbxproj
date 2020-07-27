@@ -108,12 +108,12 @@
 			children = (
 				F507E04B24C86612008CEFEE /* Utilities */,
 				F507E04824C85084008CEFEE /* Managers */,
-				F507E02724C81536008CEFEE /* Info.plist */,
 				F507E04324C84D37008CEFEE /* Model */,
 				F507E04124C842BB008CEFEE /* Support Files */,
 				F507E04024C842A8008CEFEE /* Custom views */,
 				F507E03F24C8429D008CEFEE /* Extensions */,
 				F507E04224C842DB008CEFEE /* Screens */,
+				F507E02724C81536008CEFEE /* Info.plist */,
 			);
 			path = GitHub;
 			sourceTree = "<group>";
