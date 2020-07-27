@@ -46,6 +46,9 @@ class FollowersViewController: UIViewController {
     func configureView() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     func configureCollectionView() {
@@ -84,7 +87,7 @@ class FollowersViewController: UIViewController {
             if followers.count < 100 { self.hasMoreFollowers = false }
             self.followers.append(contentsOf: followers)
             
-            if followers.isEmpty {
+            if self.followers.isEmpty {
                 DispatchQueue.main.async {
                     self.showEmptyStateView(with: "This user dosen't have any follower. Go follow him 😂", in: self.view)
                 }
@@ -105,6 +108,10 @@ class FollowersViewController: UIViewController {
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot,animatingDifferences: true)
         }
+    }
+    
+    @objc func addButtonTapped(){
+        
     }
 }
 
