@@ -25,12 +25,11 @@ class FavoriteTableViewCell: UITableViewCell {
     
     func set(with favorite: Follower) {
           usernameLabel.text = favorite.login
-          avatarImageView.downloadImage(url: favorite.avatarUrl)
+          avatarImageView.setImage(withString: favorite.avatarUrl)
     }
     
     private func configure(){
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
+        addSubviews(views: avatarImageView, usernameLabel)
         
         accessoryType = .disclosureIndicator
         

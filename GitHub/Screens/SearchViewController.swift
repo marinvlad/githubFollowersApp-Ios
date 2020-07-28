@@ -40,6 +40,9 @@ class SearchViewController: UIViewController {
         guard isUserNameEntered else {
             presentGFAlertOnMainThread(title: "Empty username", message: "Please enter a username. We need to know who to search for 😌", buttonTitle: "OK")
             return }
+        
+        userTextField.resignFirstResponder()
+        
         let followerListVC = FollowersViewController()
         followerListVC.title = userTextField.text
         followerListVC.username = userTextField.text
@@ -51,9 +54,9 @@ class SearchViewController: UIViewController {
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = UIImage(named: "gh-logo")!
-        
+        let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)

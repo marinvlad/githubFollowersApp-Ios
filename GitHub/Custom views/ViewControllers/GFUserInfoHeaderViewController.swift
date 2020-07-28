@@ -33,15 +33,6 @@ class GFUserInfoHeaderViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addSubview(){
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
-    }
-    
     func layoutUI(){
         let padding : CGFloat = 20
         let textImagePadding : CGFloat = 12
@@ -82,18 +73,18 @@ class GFUserInfoHeaderViewController: UIViewController {
     }
     
     func configureUIElements() {
-        avatarImageView.downloadImage(url: user.avatarUrl)
+        avatarImageView.setImage(withString: user.avatarUrl)
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "No location"
         bioLabel.text = user.bio ?? "No bio available"
         
-        locationImageView.image = UIImage(systemName: SFSymbols.location)
+        locationImageView.image = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
     }
     
     func configure(){
-        addSubview()
+        view.addSubviews(views: avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
     }

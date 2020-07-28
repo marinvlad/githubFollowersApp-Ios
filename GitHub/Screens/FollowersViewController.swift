@@ -164,7 +164,10 @@ extension FollowersViewController : UICollectionViewDelegate {
 
 extension FollowersViewController : UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            filteredFollowers.removeAll()
+            updateData(with: followers)
+            return }
         isSearching = true
         
         filteredFollowers = followers.filter({$0.login.lowercased().contains(filter.lowercased())})
@@ -191,7 +194,7 @@ extension FollowersViewController : FollowerListVCDelegate {
         followers.removeAll()
         filteredFollowers.removeAll()
         page = 1
-        collectionView.setContentOffset(.zero, animated: true)
+        collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         getFollowers(username: username, page: page)
     }
 }
